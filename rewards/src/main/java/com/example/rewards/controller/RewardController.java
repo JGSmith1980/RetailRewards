@@ -35,6 +35,7 @@ Check solution into GitHub
 
         // need a map of customers - key is customer id
         // need a monthly hashmap per customer to increment - key is Month, value is ongoing rewards points total
+        // generally speaking, this business logic would go in a service layer, but that is unnecessary for the purposes of this code sample
         var customerMap = new HashMap<Integer, HashMap<Month, Integer>>();
 
         for (Transaction transaction : record.getTransactions()){

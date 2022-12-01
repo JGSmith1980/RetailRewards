@@ -47,6 +47,12 @@ public class RewardControllerTest {
         assertEquals(2, result.size());
         assertEquals(600, result.get(0).getTotalRewardPoints());
         assertEquals(50, result.get(1).getTotalRewardPoints());
+        transactionList.add(generateTransaction(3, 100, 2020, 2, 1));      
+        result = controller.getRewards(record);
+        assertEquals(3, result.size());
+        assertEquals(600, result.get(0).getTotalRewardPoints());
+        assertEquals(50, result.get(1).getTotalRewardPoints());
+        assertEquals(50, result.get(2).getTotalRewardPoints());
 
     }
 
